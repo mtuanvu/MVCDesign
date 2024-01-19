@@ -17,9 +17,18 @@ include 'models/Database.php';
 $db = new Database();
 
 $studentController = new StudentController($db);
+$markController = new MarkController($db);
+
 
 
 $view = new View();
+//Step 1: Từ client -> controller
+
+
+
 
 $students = $studentController->getAllStudents();
 $view->displayStudents($students);
+
+$marks = $markController->getAllMarks();
+$view->displayStudents($marks);

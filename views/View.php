@@ -2,6 +2,7 @@
 
 class View
 {
+    //Step 4: Nhận kết quả trả về từ model sau khi đã biết cần phải gọi cái gì
     public function displayStudents($students)
     {
         echo '<h2>List of Students</h2>';

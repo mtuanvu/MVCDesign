@@ -18,6 +18,7 @@ class StudentController
 
     public function getAllStudents()
     {
+        //Step2: call model để thực hiện các thao tác Biz
         $sql = "SELECT * FROM students";
         $result = $this->db->query($sql);
 
@@ -28,7 +29,7 @@ class StudentController
             $student = new Student($data['id'], $data['name'], $data['address']);
             $students[] = $student;
         }
-
+        //Step 3: Thông báo cho view về việc sẽ có một $students từ models trả về
         return $students;
     }
 
